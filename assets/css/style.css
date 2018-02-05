@@ -1,0 +1,150 @@
+
+body {
+    background-image: url("../images/brokenScissor.jpg");
+    color: white;
+	font-family: 'Butterfly Kids', cursive;
+    background-size: 100%;
+}
+#message {
+    color: white;
+}
+h1 {
+	font-size: 80px;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+	text-align: center;
+	margin-top: 3vh;
+}
+
+h2 {
+	text-align: center;
+	font-size: 50px;
+	padding-top: 1.5vh;
+	padding-bottom: 1.5vh;
+}
+
+form {
+	display: inline-block;
+	width: 100%;
+}
+
+
+.transparent-background {
+    background: transparent;
+    color: white;
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+}
+
+.opacity-zero {
+	opacity: 0;
+}
+
+
+.hidden {
+	visibility: hidden;
+}
+
+.options {
+	margin-bottom: 3vh;
+}
+
+.statistics {
+	font-size: 20px;
+	margin-bottom: -3vh;
+}
+
+.option {
+	text-align: center;
+	font-size: 40px;
+	margin: 1vh 2vw;
+	padding-top: 1.6vh;
+}
+
+.option:hover {
+	cursor: pointer;
+	border: 2px solid;
+	
+}
+
+
+
+.choice {
+	text-align: center;
+	font-size: 70px;
+	margin-top: 8vh;
+	margin-bottom: 8vh;
+}
+
+.form-wrapper {
+	display: block;
+	text-align: center;
+}
+
+.submit-btn:hover {
+	background-color: teal;
+	color: white;
+	cursor: pointer;
+}
+
+.submit-btn {
+	color: white;
+	font-size: 20px;
+	padding: 5px 7px 0px 7px;
+}
+
+.input-box {
+	height: 5vh;
+	color: white;
+	font-size: 20px;
+	margin-right: 1.3vw;
+	padding-top: 10px;
+	padding-bottom: 7px;
+	width: 15%;
+}
+
+
+
+.submit-btn:active {
+    background-color: brown;;
+    color: white;
+}
+
+::placeholder {
+	color: white;
+}
+
+#main-game {
+	margin: 4vh 6vw;
+	display: flex;
+	justify-content: space-between;
+}
+
+#message {
+	width: 50%;
+    margin-bottom: 8vh;
+    font-family: 'Indie Flower', cursive;
+}
+
+#chat {
+    font-family: 'Indie Flower', cursive;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 4vh;
+	height: 30vh;
+	font-size: 22px;
+	overflow: scroll;
+    line-height: 1.5;
+    
+    
+}
+
+.grey {
+    
+	color:lightgrey;
+}
+
+.db {
+	color: rgba(5, 5, 70, 0.637);
+}
