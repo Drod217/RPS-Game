@@ -25,14 +25,14 @@
   <!-- This is for choosing sides -->
   <div class = "container display1" style = "display: normal;">
 
-    <h1> PICK YOUR SIDE </h1>
+    <h1 style = "color: grey"> PICK YOUR SIDE </h1>
 
     <div class = "row">
 
       <!-- This is where to pick the red column -->
       <div class = "col-md-6">
         
-          <h1>Dark</h1>
+          <h1 style ="color: black">Dark</h1>
           <p><img src = "assets/images/Rick.jpg" id="Rick"></p>
           <p><a class="btn btn-primary btn-lg pick "  role="button" id = "fire" >Welcome to the void!</a></p>
         
@@ -54,13 +54,13 @@
     <!-- Row for keeping score  -->
     <div class = "row">
       <div class = "col-md-4 fscore">
-        <p class= "level flevel">Level: 1</p>
+        <p class= "level flevel" style="color: black">Level: 1</p>
       </div>
       <div class = "col-md-4 ties">
-        <p class= "level draws"> Draws: </p>
+        <p class= "level draws" style ="color: grey"> Draws: </p>
       </div>
       <div class = "col-md-4 iscore">
-        <p class= "level ilevel">Level: 1 </p>
+        <p class= "level ilevel" style ="color: white">Level: 1 </p>
       </div>
     </div>
 
@@ -89,7 +89,7 @@
     <div class = "row">
       <div class = "col-md-3">
        <div class = "row name">
-         <div class = "col-md-5" style = "float : left;">Dark </div> <div class= "col-md-2 flight" style = "height : 50px;">  </div>
+         <div class = "col-md-5" style = "color: black; float: left;">Dark </div> <div class= "col-md-2 flight" style = "height : 50px;">  </div>
        </div>
        <div class = "row" >
          <div class = "col-md-6">
@@ -110,7 +110,7 @@
 
       <div class = "col-md-6">
         <div class = "row">
-        <div class="panel panel-default" style = "height: 200px;">
+        <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">Opponent</h3>
           </div>
@@ -129,10 +129,11 @@
         <div class = "row name">
           <div class = "col-md-5" style = "float :right;" > Light</div> <div class= "col-md-2 ilight" style = "height : 50px;">  </div>
         </div>
-        <div class = "row">
-          <div class = "col-md-8 instructions">
+        <div class = "row instructions">
             Instructions: Win games of Paper Scissors Rocks to earn stars. 10 wins levels up your character. Make your character unconquerable!
             If your character doesn't have a green light next to their name, then choose a move to lock in your choice!
+          <div class = "col-md-8">
+            
           </div>
           <div class = "col-md-4 istars">
 

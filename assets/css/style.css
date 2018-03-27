@@ -171,11 +171,11 @@ p {
 
 
 .panel {
-	color: darkblue;
-   bottom:0px;
+	color: red
+   
 }
 .favatar {
-	color: darkblue;
+	color: red;
 }
 
 .chat {
@@ -196,6 +196,9 @@ p {
    background: darkblue;
 
 }
+.instructions {
+	text-align: center;
+}
 
 #iqueen{
 	height: 200px;
@@ -213,6 +216,18 @@ p {
 	width: 100px;
 }
 
-/* .ihands {
-	float: right;
-} */
+#fire {
+	background: black;
+}
+
+.ilevel {
+	color: white !important;
+}
+
+.draws {
+	color: grey !important;
+}
+
+.flevel {
+	color: black !important;
+}
