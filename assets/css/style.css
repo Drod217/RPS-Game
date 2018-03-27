@@ -148,3 +148,71 @@ form {
 .db {
 	color: rgba(5, 5, 70, 0.637);
 }
+
+
+#Rick {
+	margin: auto;
+	height: 200px;
+	width: 200px;
+}
+
+#Morty {
+	height: 200px;
+	width: 200px;
+}
+.jumbotron { 
+	height: 200px;
+	width: 200px;
+}
+p {
+	text-align: center;
+	color: darkblue !important;
+}
+
+
+.panel {
+	color: darkblue;
+   bottom:0px;
+}
+.favatar {
+	color: darkblue;
+}
+
+.chat {
+   color: darkblue !important;
+   bottom:0px;
+}
+
+#m{
+	height: 50px;
+	width: 50px;
+}
+
+#r {
+	height: 50px;
+	width: 50px;
+}
+.hell {
+   background: darkblue;
+
+}
+
+#iqueen{
+	height: 200px;
+	width: 200px;
+	float: right;
+}
+#h{
+	height: 200px;
+	width: 200px;
+}
+
+
+#w{
+	height: 100px;
+	width: 100px;
+}
+
+/* .ihands {
+	float: right;
+} */

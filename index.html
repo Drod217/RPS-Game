@@ -1,63 +1,148 @@
 <!DOCTYPE html>
-<html lang="en-us">
-	<head>
-		<meta charset="UTF-8">
-		<title>Rock Paper Scissors</title>
-        <link href="https://fonts.googleapis.com/css?family=Butterfly+Kids" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-		<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
-		
-	</head>
-	<body>
-		<div class = "row">
-			<h1>Rock Paper Scissors</h1>
-		</div>
-		<div class = "row form-wrapper">
-			<form>
-				<input type = "text" name = "player-name" id = "player-name" placeholder = "Enter your name" class = "input-box transparent-background">
-				<input type = "submit" value = "Submit" class = "submit-btn transparent-background" id = "submit-name">
-			</form>
-		</div>
-		<div class = "row" id = "main-game">
-			<div class = "col-xs-3" id="pOne-box">
-				<h2 id="pOne">Waiting On Player One</h2>
-				<div class = "options opacity-zero" id = "options-one">
-					<p class = "option-one option">Rock</p>
-					<p class = "option-one option">Paper</p>
-					<p class = "option-one option">Scissors</p>
-				</div>
-				<div class = "hidden">
-					<p class = "choice"><span id = "pOne-choice"></span>!</p>
-				</div>
-				<p id = "pOne-statistics" class = "statistics text-center opacity-zero">Wins: <span id = "pOne-wins"></span>&nbsp;&nbsp;&nbsp;&nbsp;Losses: <span id = "pOne-losses"></span></p>
-			</div>
-			<div class = "col-xs-3" id="result-box">
-				<h2 id="result"><span id="winner"></span></h2>
-			</div>
-			<div class = "col-xs-3" id="pTwo-box">
-				<h2 id="pTwo">Waiting On Player Two</h2>
-				<div class = "options opacity-zero" id = "options-two">
-					<p class = "option-two option">Rock</p>
-					<p class = "option-two option">Paper</p>
-					<p class = "option-two option">Scissors</p>
-				</div>
-				<div class = "hidden">
-					<p class = "choice"><span id = "pTwo-choice"></span>!</p>
-				</div>
-				<p id = "pTwo-statistics" class = "statistics text-center opacity-zero">Wins: <span id = "pTwo-wins"></span>&nbsp;&nbsp;&nbsp;&nbsp;Losses: <span id = "pTwo-losses"></span></p>
-			</div>
-		</div>
-		<div class = "row transparent-background" id = "chat">
-		</div>
-		<div class = "row form-wrapper">
-			<form>
-				<input type = "text" name = "message" id = "message" placeholder = "Send a message to your opponent" class = "input-box transparent-background">
-				<input type = "submit" value = "Submit" class = "submit-btn transparent-background" id = "submit-message">
-			</form>
-		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
-		<script type="text/javascript" src="assets/javascript/script.js"></script>
-	</body>
+<html lang= "en-us">
+
+<head>
+ <title> FIGHT! </title>
+
+ <!-- jQuery -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+ <!-- Bootstrap CDN-->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+ <!-- CSS file  -->
+ <link href="https://fonts.googleapis.com/css?family=Teko|Josefin+Sans" rel="stylesheet">
+<link rel="stylesheet" href= "assets/css/style.css">
+ <!-- Firebase link-->
+ <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+
+ <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+<body>
+
+  <!-- This is for choosing sides -->
+  <div class = "container display1" style = "display: normal;">
+
+    <h1> PICK YOUR SIDE </h1>
+
+    <div class = "row">
+
+      <!-- This is where to pick the red column -->
+      <div class = "col-md-6">
+        
+          <h1>Dark</h1>
+          <p><img src = "assets/images/Rick.jpg" id="Rick"></p>
+          <p><a class="btn btn-primary btn-lg pick "  role="button" id = "fire" >Welcome to the void!</a></p>
+        
+      </div>
+      <!-- This is where to pick the blue column -->
+      <div class = "col-md-6">
+        
+          <h1>Light</h1>
+          <p><img src = "assets/images/Morty.jpg" id="Morty"></p>
+          <p><a class="btn btn-primary btn-lg pick"  role="button" id = "ice">Light up the world!</a></p>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- This is display 2 for when the game starts -->
+  <div class = "container display2" style = "display: none;">
+
+    <!-- Row for keeping score  -->
+    <div class = "row">
+      <div class = "col-md-4 fscore">
+        <p class= "level flevel">Level: 1</p>
+      </div>
+      <div class = "col-md-4 ties">
+        <p class= "level draws"> Draws: </p>
+      </div>
+      <div class = "col-md-4 iscore">
+        <p class= "level ilevel">Level: 1 </p>
+      </div>
+    </div>
+
+    <!-- For the picutre -->
+    <div class = "row">
+      <div class = "col-md-6">
+        <div class = "row">
+
+        </div>
+        <div class= "row fhands">
+          <img src = "assets/images/Rick.jpg" id = "Rick">
+        </div>
+      </div>
+      <div class = "col-md-6">
+        <div class = "row">
+
+        </div>
+        <div class = "row ihands">
+          <img src = "assets/images/Morty.jpg" id = "Morty" style = "float :right; ">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Row for choosing and chat  -->
+    <div class = "row">
+      <div class = "col-md-3">
+       <div class = "row name">
+         <div class = "col-md-5" style = "float : left;">Dark </div> <div class= "col-md-2 flight" style = "height : 50px;">  </div>
+       </div>
+       <div class = "row" >
+         <div class = "col-md-6">
+         <div class = "move" id = "paper">
+           <img src = "assets/images/paper.jpg"> PAPER
+        </div>
+        <div class = "move" id = "scissors">
+          <img src = "assets/images/scissors.jpg"> SCIS
+        </div>
+        <div class = "move" id = "rock">
+          <img src = "assets/images/rock.jpg"> ROCK
+       </div>
+     </div>
+          <div class = "col-md-6 fstars">
+          </div>
+       </div>
+      </div>
+
+      <div class = "col-md-6">
+        <div class = "row">
+        <div class="panel panel-default" style = "height: 200px;">
+          <div class="panel-heading">
+            <h3 class="panel-title">Opponent</h3>
+          </div>
+          <div class="panel-body">
+
+          </div>
+        </div>
+      </div>
+      <div class= "row">
+        <input type="text" class= "chat" placeholder="Strike a FRIENDLY conversation!" style = "width: 85%;">
+          <input type="submit" class = "submit hell" value="Send">
+      </div>
+      </div>
+
+      <div class = "col-md-3">
+        <div class = "row name">
+          <div class = "col-md-5" style = "float :right;" > Light</div> <div class= "col-md-2 ilight" style = "height : 50px;">  </div>
+        </div>
+        <div class = "row">
+          <div class = "col-md-8 instructions">
+            Instructions: Win games of Paper Scissors Rocks to earn stars. 10 wins levels up your character. Make your character unconquerable!
+            If your character doesn't have a green light next to their name, then choose a move to lock in your choice!
+          </div>
+          <div class = "col-md-4 istars">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</body>
+</html>
