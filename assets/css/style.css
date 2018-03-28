@@ -1,6 +1,6 @@
 
 body {
-    background-image: url("../images/brokenScissor.jpg");
+    background-image: url("../images/RM.jpg");
     color: white;
 	font-family: 'Butterfly Kids', cursive;
     background-size: 100%;
@@ -166,12 +166,16 @@ form {
 }
 p {
 	text-align: center;
-	color: darkblue !important;
+	color: red !important;
 }
 
 
 .panel {
-	color: red
+	color: red;
+	background-image: url("../images/R&M.png");
+	background-size: 100%;
+	text-align: left;
+
    
 }
 .favatar {
@@ -179,7 +183,7 @@ p {
 }
 
 .chat {
-   color: darkblue !important;
+   color: red !important;
    bottom:0px;
 }
 
@@ -193,11 +197,13 @@ p {
 	width: 50px;
 }
 .hell {
-   background: darkblue;
+   background: #749095;
 
 }
 .instructions {
 	text-align: center;
+	font-size: 20px;
+	color: #f14c4d;
 }
 
 #iqueen{
@@ -229,5 +235,11 @@ p {
 }
 
 .flevel {
-	color: black !important;
+	color: red !important;
+}
+
+.move {
+		cursor: pointer;
+		font-size: 10px !important;
+	
 }

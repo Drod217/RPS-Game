@@ -188,6 +188,7 @@ $(document).on("click",".hell",function(){
     }
 });
 
+
 //when fire chat changes
 database.ref("/firechat").on("value", function(snapshot) {
   message = snapshot.val().chat;
@@ -218,6 +219,13 @@ database.ref("/icechat").on("value", function(snapshot) {
   $(".panel-body").append(m);
 
 
+});
+
+$("input").keypress(function(event) {
+  if (event.which == 13) {
+      event.preventDefault();
+      $(".hell").submit();
+  }
 });
 
 //function to display the pictures

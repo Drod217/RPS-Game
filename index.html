@@ -54,7 +54,7 @@
     <!-- Row for keeping score  -->
     <div class = "row">
       <div class = "col-md-4 fscore">
-        <p class= "level flevel" style="color: black">Level: 1</p>
+        <p class= "level flevel" style="color: red">Level: 1</p>
       </div>
       <div class = "col-md-4 ties">
         <p class= "level draws" style ="color: grey"> Draws: </p>
@@ -89,7 +89,7 @@
     <div class = "row">
       <div class = "col-md-3">
        <div class = "row name">
-         <div class = "col-md-5" style = "color: black; float: left;">Dark </div> <div class= "col-md-2 flight" style = "height : 50px;">  </div>
+         <div class = "col-md-5" style = "color: red; float: left;">Dark </div> <div class= "col-md-2 flight" style = "height : 50px;">  </div>
        </div>
        <div class = "row" >
          <div class = "col-md-6">
@@ -109,7 +109,9 @@
       </div>
 
       <div class = "col-md-6">
-        <div class = "row">
+        <div class = "row instructions">
+            Instructions: Win games of Rock, Paper, Scissors. Five wins levels up your character. Make your character unconquerable!
+            If your character doesn't have a green light next to their name, then choose a move to lock in your choice!
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">Opponent</h3>
@@ -120,25 +122,30 @@
         </div>
       </div>
       <div class= "row">
-        <input type="text" class= "chat" placeholder="Strike a FRIENDLY conversation!" style = "width: 85%;">
+        <input type="text" class= "chat" placeholder="Chat it up!!" style = "width: 85%;">
           <input type="submit" class = "submit hell" value="Send">
       </div>
       </div>
 
       <div class = "col-md-3">
         <div class = "row name">
-          <div class = "col-md-5" style = "float :right;" > Light</div> <div class= "col-md-2 ilight" style = "height : 50px;">  </div>
+          <div class = "col-md-5" style = "float: right;"> Light</div> <div class= "col-md-2 ilight" style = "height : 50px;">  </div>
         </div>
-        <div class = "row instructions">
-            Instructions: Win games of Rock, Paper, Scissors. 5 wins levels up your character. Make your character unconquerable!
-            If your character doesn't have a green light next to their name, then choose a move to lock in your choice!
-          <div class = "col-md-8">
-            
-          </div>
-          <div class = "col-md-4 istars">
-
+        <div class = "row" style = "float: right;">
+            <div class = "col-md-6">
+            <div class = "move" id = "paper">
+              <img src = "assets/images/paper.jpg"> PAPER
+           </div>
+           <div class = "move" id = "scissors">
+             <img src = "assets/images/scissors.jpg"> SCISSORS
+           </div>
+           <div class = "move" id = "rock">
+             <img src = "assets/images/rock.jpg"> ROCK
           </div>
         </div>
+             <div class = "col-md-6 fstars">
+             </div>
+          </div>
       </div>
     </div>
   </div>
