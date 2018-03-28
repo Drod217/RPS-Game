@@ -304,7 +304,7 @@ function updateScore(winner){
  if (winner === "firelord"){
 
     //if firewins is 10, up the level, and reset firewins
-    if (firewins === 10){
+    if (firewins === 5){
       firelevel++;
       $(".flevel").html("Level: " + firelevel);
       firewins = 0;
@@ -312,7 +312,7 @@ function updateScore(winner){
     //else
     else{
 
-      //clear div for stars
+      
       $(".fstars").html("");
 
       //for the number of wins, append a star
@@ -322,11 +322,11 @@ function updateScore(winner){
     }
   }
 
-  //if winner is icequeen
+ 
  else if (winner === "icequeen"){
 
-    //if icewins is 10, up the level, and reset firewins
-    if (icewins === 10){
+    
+    if (icewins === 5){
       icelevel++;
       $(".ilevel").html("Level: " + icelevel);
       icewins = 0;
@@ -334,7 +334,7 @@ function updateScore(winner){
     //else
     else{
 
-      //clear div for stars
+      
       $(".istars").html("");
 
       //for the number of wins, append a star
