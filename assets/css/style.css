@@ -167,19 +167,28 @@ form {
 p {
 	text-align: center;
 	color: red !important;
+	
 }
 
 
 .panel {
 	color: red;
-	background-image: url("../images/R&M.png");
+	background-image: url("../images/chat.png");
 	background-size: 100%;
 	text-align: left;
+	
 
    
 }
+.panel-body {
+	overflow: auto;
+	height: 30vh; 
+	width: auto;
+	opacity: .8;
+}
 .favatar {
 	color: red;
+
 }
 
 .chat {

@@ -170,8 +170,14 @@ database.ref("/moves").on("value", function(snapshot) {
     }
     });
 
-//for the chat whenever, the send button gets sent
+$("input").keyup(function(event) {
+      if (event.keyCode === 13) {
+          $(".hell").click();
+          event.currentTarget.value = "";
+      }
+  });
 $(document).on("click",".hell",function(){
+
     message = $("input").val();
     //if its fire then save in firechat
     if (player === "fire"){
